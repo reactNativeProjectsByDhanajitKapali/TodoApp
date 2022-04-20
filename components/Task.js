@@ -4,11 +4,10 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 const Task = props => {
   return (
     <View style={styles.item}>
-      <View style={styles.itemLeft}>
-        <View style={styles.square}></View>
-        <Text style={styles.itemText}>{props.text}</Text>
-      </View>
-      <View style={styles.circular}></View>
+      <Text style={styles.itemText}>{props.text}</Text>
+      {/* <View style={styles.circular}>
+        <Text style={{fontSize: 25, color: 'white'}}>-</Text>
+      </View> */}
     </View>
   );
 };
@@ -38,13 +37,19 @@ const styles = StyleSheet.create({
   },
   itemText: {
     maxWidth: '80%',
+    color: 'black',
+    fontSize: 18,
   },
   circular: {
-    width: 12,
-    height: 12,
-    borderColor: '#55BCF6',
+    marginLeft: 20,
+    backgroundColor: 'red',
+    borderColor: 'red',
+    width: 25,
+    height: 25,
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 12.5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
